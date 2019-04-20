@@ -4,11 +4,10 @@ RUN useradd webmgr -u 600
 
 RUN apt update && apt -y upgrade && DEBIAN_FRONTEND=noninteractive apt -y install \
 	git \
-    apache2 \
+        apache2 \
 	php7.2 \
 	php7.2-common \
-	php7.2-mysql \
-	libapache2-mod-php7.2 \
+	php7.2-mysql \	
 	php7.2-curl \
 	php7.2-cli \
 	php7.2-json \
@@ -33,6 +32,8 @@ RUN a2enmod rewrite
 # Update the PHP.ini file, enable <? ?> tags and quieten logging.
 RUN sed -i "s/short_open_tag = Off/short_open_tag = On/" /etc/php/7.2/apache2/php.ini
 RUN sed -i "s/error_reporting = .*$/error_reporting = E_ERROR | E_WARNING | E_PARSE/" /etc/php/7.2/apache2/php.ini
+RUN sed -i "s/display_errors = Off/display_errors = On/" /etc/php/7.2/apache2/php.ini
+
 #RUN sed -i "s/128M/512M/" /etc/php/7.2/apache2/php.ini
 # Manually set up the apache environment variables
 ENV APACHE_RUN_USER webmgr
