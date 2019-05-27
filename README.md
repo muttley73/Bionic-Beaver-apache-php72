@@ -4,18 +4,18 @@ php error reporting enabled on E_ERROR | E_WARNING | E_PARSE/
 
 installed modules:
 
-php7.1-mysql
-libapache2-mod-php7.1
-php7.1-curl
-php7.1-cli
-php7.1-json
-php7.1-sqlite3
-php7.1-intl
-php7.1-dev
-php7.1-gd
-php7.1-mbstring
-php7.1-mcrypt
-php7.1-zip
+php7.2-mysql
+libapache2-mod-php7.2
+php7.2-curl
+php7.2-cli
+php7.2-json
+php7.2-sqlite3
+php7.2-intl
+php7.2-dev
+php7.2-gd
+php7.2-mbstring
+php7.2-mcrypt
+php7.2-zip
 
 volumes:
 
