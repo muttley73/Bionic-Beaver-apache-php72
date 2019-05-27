@@ -17,6 +17,7 @@ RUN apt update && apt -y upgrade && DEBIAN_FRONTEND=noninteractive apt -y instal
 	php7.2-gd \
 	php7.2-opcache \
 	php7.2-zip \
+        php7.2-ldap \
 	curl \
 	php-xdebug \
 	vim
